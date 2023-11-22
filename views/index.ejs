@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div class="container">
+    <% messages.forEach(mes=>{%>
+      <div>
+        <h3><%=mes.user%> </h3>
+        <p><%=mes.text%> </p>
+        <p><%=mes.added%></p>
+      </div>
+      <%})%>
+      </div>
+      <div class="button">
+    <button type="button"><a href="/new">create message</a></button>
+  </div>
+  </body>
+</html>
